@@ -1,0 +1,15 @@
+@import "vars";
+@import "fonts";
+
+.container {
+  max-width: $container-width;
+  padding: 0 15px 0 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+body {
+  font-family: $text-font-family;
+  font-size: $text-font-size;
+  font-weight: $text-font-weight;
+}
