@@ -1,0 +1,74 @@
+@import '../../styles/vars';
+
+.nav-wrap {
+  box-shadow: -2px 0px 8px 2px rgba(0, 0, 0, 0.1);
+  padding: 5px 0;
+  @media (max-width: $breakpoint-tablet) {
+    padding: 20px 0;
+  }
+
+  .nav-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @media (max-width: $breakpoint-tablet) {
+      display: block;
+    }
+
+    .nav-logo {
+      @media (max-width: $breakpoint-tablet) {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .nav-img {
+        width: 45px;
+        height: 45px;
+      }
+
+      .nav-link {
+        font-family: "Karla", "Arial", sans-serif;
+      }
+
+      .nav-button {
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        @media (min-width: $breakpoint-tablet) {
+          display: none;
+        }
+      }
+    }
+
+    .nav-content {
+      @media (max-width: $breakpoint-tablet) {
+        display: none;
+      }
+
+      .nav-list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 25px;
+        @media (max-width: $breakpoint-tablet) {
+          display: block;
+        }
+
+        .nav-item {
+          @media (max-width: $breakpoint-tablet) {
+            padding-top: 20px;
+          }
+        }
+      }
+    }
+
+    .nav-open {
+      display: block;
+    }
+  }
+}
+
+
+
+
+
+

@@ -1,5 +1,13 @@
 @import "vars";
 @import "fonts";
+@import "normalize.css/normalize.css";
+
+body {
+  font-family: $text-font-family;
+  font-size: $text-font-size;
+  font-weight: $text-font-weight;
+  color: $text-color;
+}
 
 .container {
   max-width: $container-width;
@@ -8,8 +16,15 @@
   margin-right: auto;
 }
 
-body {
-  font-family: $text-font-family;
-  font-size: $text-font-size;
-  font-weight: $text-font-weight;
+ul {
+  margin: 0;
+  padding-inline-start: 0;
+}
+
+li {
+  list-style-type: none;
+}
+a{
+  text-decoration: none;
+  color: $text-color;
 }

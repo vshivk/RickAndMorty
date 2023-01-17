@@ -2,8 +2,12 @@
 
 $container-width: 1170px;
 
-$text-color: #fff;
+$text-color: #000;
 $text-font-family: "Roboto", "Arial", sans-serif;
 $text-font-size: 20px;
 $text-font-weight: 400;
 $text-font-weight-bold: 500;
+
+$breakpoint-mobile: 480px;
+$breakpoint-tablet: 768px;
+$breakpoint-desktop: 991px;
