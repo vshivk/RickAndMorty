@@ -1,0 +1,16 @@
+@import '../../styles/vars';
+
+.characters {
+  .characters-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .characters-image-cover {
+    @media (max-width: $breakpoint-tablet) {
+      width: 312px;
+      height: 104px;
+    }
+  }
+}

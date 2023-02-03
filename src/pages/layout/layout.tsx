@@ -7,11 +7,11 @@ const Layout:FC = () => {
     return (
         <>
             <Header/>
-            <div className={'container'}>
-                <div className={'section'}>
+            <main className={'container'}>
+                <section className={'section'}>
                     <Outlet/>
-                </div>
-            </div>
+                </section>
+            </main>
         </>
     );
 };

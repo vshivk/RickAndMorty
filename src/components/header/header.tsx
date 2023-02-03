@@ -9,7 +9,7 @@ const Header: FC = () => {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
-        <div className={'nav-wrap'}>
+        <header className={'nav-wrap'}>
             <div className={'nav-inner container'}>
                 <div className={'nav-logo'}>
                     <Link to={'/'} className={'nav-link'}>
@@ -33,7 +33,7 @@ const Header: FC = () => {
                     </ul>
                 </nav>
             </div>
-        </div>
+        </header>
     );
 };
 
