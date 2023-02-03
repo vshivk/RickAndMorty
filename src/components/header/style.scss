@@ -55,6 +55,7 @@
 
   .nav-button {
     background: transparent;
+    display: flex;
     @media (min-width: $breakpoint-tablet) {
       display: none;
     }
