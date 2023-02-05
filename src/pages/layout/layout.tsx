@@ -1,17 +1,17 @@
 import React, {FC} from 'react';
 import Header from "../../components/header/header";
 import {Outlet} from "react-router";
-import './style.scss'
+import {Container, Section} from "../../styled";
 
-const Layout:FC = () => {
+const Layout: FC = () => {
     return (
         <>
             <Header/>
-            <main className={'container'}>
-                <section className={'section'}>
+            <Container>
+                <Section>
                     <Outlet/>
-                </section>
-            </main>
+                </Section>
+            </Container>
         </>
     );
 };

@@ -1,5 +1,6 @@
 import React, {FC} from 'react';
-import './styles/index.scss'
+import './styles/index.scss';
+import './styled';
 import {Route, Routes} from "react-router";
 import Layout from "./pages/layout/layout";
 import Characters from "./pages/characters/characters";

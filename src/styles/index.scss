@@ -2,20 +2,6 @@
 @import "fonts";
 @import "normalize.css/normalize.css";
 
-body {
-  font-family: $text-font-family;
-  font-size: $text-font-size;
-  font-weight: $text-font-weight;
-  color: $text-color;
-}
-
-.container {
-  max-width: $container-width;
-  padding: 0 15px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
 ul {
   margin: 0;
   padding-inline-start: 0;
@@ -70,6 +56,7 @@ button {
   background-repeat: no-repeat;
   padding-left: 35px;
   background-position: 5px 50%;
+  outline-offset: 0;
 }
 
 .input-select {
