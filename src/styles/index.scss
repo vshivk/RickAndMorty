@@ -2,44 +2,6 @@
 @import "fonts";
 @import "normalize.css/normalize.css";
 
-ul {
-  margin: 0;
-  padding-inline-start: 0;
-}
-
-figure {
-  margin: 0;
-}
-
-li {
-  list-style-type: none;
-}
-
-h6 {
-  font-weight: $text-font-weight-bold;
-  font-size: $text-font-size;
-  margin: 0;
-}
-
-p {
-  margin: 0;
-}
-
-a {
-  text-decoration: none;
-  color: $text-color;
-}
-
-span {
-  font-size: $text-small-font-size;
-  color: rgba(0, 0, 0, 0.6);
-}
-
-button {
-  border: none;
-  cursor: pointer;
-}
-
 .input-filter {
   border: $input-border-color;
   padding: $input-padding;
@@ -64,14 +26,4 @@ button {
   background-repeat: no-repeat;
   padding-right: 35px;
   background-position: 100% 50%;
-}
-
-.button-load {
-  font-size: $text-small-font-size;
-  background: $btn-background-color;
-  border-radius: $btn-border-radius;
-  color: $btn-text-color;
-  padding: $btn-padding;
-  box-shadow: $btn-box-shadow;
-  font-weight: $text-font-weight-bold;
 }

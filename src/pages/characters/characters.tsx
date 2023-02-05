@@ -1,120 +1,131 @@
 import React, {FC} from 'react';
 import logoCharacters from "../../assets/logo-characters.png";
 import rick from "../../assets/rick.png";
-import "./style.scss"
 import InputSearch from "../../components/selects/input-search";
 import InputSelect from "../../components/selects/input-select";
+import {
+    CharactersImg,
+    CharactersImgCover,
+    CharactersMain,
+    CharactersFiltration,
+    CharactersWrap,
+    CharactersList,
+    CharactersItemFigure,
+    CharactersItemImg,
+    CharactersItemDescription,
+    Button, ButtonLoad
+} from "./styled";
 
 const Characters: FC = () => {
     return (
-        <div className={'characters'}>
-            <div className={'characters-image'}>
-                <img className={'characters-image-cover'} src={logoCharacters} alt="logo-characters"/>
-            </div>
-            <div className={'characters-main'}>
-                <div className={'characters-filtration'}>
+        <>
+            <CharactersImg>
+                <CharactersImgCover src={logoCharacters} alt="logo-characters"/>
+            </CharactersImg>
+            <CharactersMain>
+                <CharactersFiltration>
                     <InputSearch placeholder={'Filter by name...'}/>
                     <InputSelect placeholder={'Species'}/>
                     <InputSelect placeholder={'Gender'}/>
                     <InputSelect placeholder={'Status'}/>
-                </div>
-                <div style={{display: 'grid', gap: '40px'}}>
-                    <ul className={'characters-list'}>
-                        <li className={'characters-item'}>
+                </CharactersFiltration>
+                <CharactersWrap>
+                    <CharactersList>
+                        <li>
                             <a href="">
-                                <figure className={'characters-item-figure'}>
-                                    <img className={'characters-item-img'} src={rick} alt=""/>
-                                    <figcaption className={'characters-item-description'}>
+                                <CharactersItemFigure>
+                                    <CharactersItemImg src={rick} alt=""/>
+                                    <CharactersItemDescription>
                                         <h6>Rick Sanchez</h6>
                                         <span>Human</span>
-                                    </figcaption>
-                                </figure>
+                                    </CharactersItemDescription>
+                                </CharactersItemFigure>
                             </a>
                         </li>
-                        <li className={'characters-item'}>
+                        <li>
                             <a href="">
-                                <figure className={'characters-item-figure'}>
-                                    <img className={'characters-item-img'} src={rick} alt=""/>
-                                    <figcaption className={'characters-item-description'}>
+                                <CharactersItemFigure>
+                                    <CharactersItemImg src={rick} alt=""/>
+                                    <CharactersItemDescription>
                                         <h6>Rick Sanchez</h6>
                                         <span>Human</span>
-                                    </figcaption>
-                                </figure>
+                                    </CharactersItemDescription>
+                                </CharactersItemFigure>
                             </a>
                         </li>
-                        <li className={'characters-item'}>
+                        <li>
                             <a href="">
-                                <figure className={'characters-item-figure'}>
-                                    <img className={'characters-item-img'} src={rick} alt=""/>
-                                    <figcaption className={'characters-item-description'}>
+                                <CharactersItemFigure>
+                                    <CharactersItemImg src={rick} alt=""/>
+                                    <CharactersItemDescription>
                                         <h6>Rick Sanchez</h6>
                                         <span>Human</span>
-                                    </figcaption>
-                                </figure>
+                                    </CharactersItemDescription>
+                                </CharactersItemFigure>
                             </a>
                         </li>
-                        <li className={'characters-item'}>
+                        <li>
                             <a href="">
-                                <figure className={'characters-item-figure'}>
-                                    <img className={'characters-item-img'} src={rick} alt=""/>
-                                    <figcaption className={'characters-item-description'}>
+                                <CharactersItemFigure>
+                                    <CharactersItemImg src={rick} alt=""/>
+                                    <CharactersItemDescription>
                                         <h6>Rick Sanchez</h6>
                                         <span>Human</span>
-                                    </figcaption>
-                                </figure>
+                                    </CharactersItemDescription>
+                                </CharactersItemFigure>
                             </a>
                         </li>
-                        <li className={'characters-item'}>
+                        <li>
                             <a href="">
-                                <figure className={'characters-item-figure'}>
-                                    <img className={'characters-item-img'} src={rick} alt=""/>
-                                    <figcaption className={'characters-item-description'}>
+                                <CharactersItemFigure>
+                                    <CharactersItemImg src={rick} alt=""/>
+                                    <CharactersItemDescription>
                                         <h6>Rick Sanchez</h6>
                                         <span>Human</span>
-                                    </figcaption>
-                                </figure>
+                                    </CharactersItemDescription>
+                                </CharactersItemFigure>
                             </a>
                         </li>
-                        <li className={'characters-item'}>
+                        <li>
                             <a href="">
-                                <figure className={'characters-item-figure'}>
-                                    <img className={'characters-item-img'} src={rick} alt=""/>
-                                    <figcaption className={'characters-item-description'}>
+                                <CharactersItemFigure>
+                                    <CharactersItemImg src={rick} alt=""/>
+                                    <CharactersItemDescription>
                                         <h6>Rick Sanchez</h6>
                                         <span>Human</span>
-                                    </figcaption>
-                                </figure>
+                                    </CharactersItemDescription>
+                                </CharactersItemFigure>
                             </a>
                         </li>
-                        <li className={'characters-item'}>
+                        <li>
                             <a href="">
-                                <figure className={'characters-item-figure'}>
-                                    <img className={'characters-item-img'} src={rick} alt=""/>
-                                    <figcaption className={'characters-item-description'}>
+                                <CharactersItemFigure>
+                                    <CharactersItemImg src={rick} alt=""/>
+                                    <CharactersItemDescription>
                                         <h6>Rick Sanchez</h6>
                                         <span>Human</span>
-                                    </figcaption>
-                                </figure>
+                                    </CharactersItemDescription>
+                                </CharactersItemFigure>
                             </a>
                         </li>
-                        <li className={'characters-item'}>
+                        <li>
                             <a href="">
-                                <figure className={'characters-item-figure'}>
-                                    <img className={'characters-item-img'} src={rick} alt=""/>
-                                    <figcaption className={'characters-item-description'}>
+                                <CharactersItemFigure>
+                                    <CharactersItemImg src={rick} alt=""/>
+                                    <CharactersItemDescription>
                                         <h6>Rick Sanchez</h6>
                                         <span>Human</span>
-                                    </figcaption>
-                                </figure>
+                                    </CharactersItemDescription>
+                                </CharactersItemFigure>
                             </a>
                         </li>
-                    </ul>
-                    <div style={{display: 'flex', justifyContent: 'center', padding: '20px 0'}}>
-                        <button className={'button-load'} type={"button"}>LOAD MORE</button>
-                    </div>
-                </div>
-            </div>
-        </div>
+                    </CharactersList>
+                    <Button>
+                        <ButtonLoad type={'button'}>LOAD MORE</ButtonLoad>
+                    </Button>
+                </CharactersWrap>
+            </CharactersMain>
+        </>
     );
 };
 
