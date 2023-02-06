@@ -1,13 +1,12 @@
 import React, {FC} from 'react';
-
+import {InputSearchStyled} from "./styled";
 interface IInputSearchProps {
     placeholder: string,
 }
 const InputSearch:FC<IInputSearchProps> = ({placeholder}) => {
     return (
-        <input
+        <InputSearchStyled
             type="search"
-            className={'input-search input-filter'}
             placeholder={placeholder}
         />
     );

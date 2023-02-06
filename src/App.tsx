@@ -1,5 +1,5 @@
 import React, {FC} from 'react';
-import './styles/index.scss';
+import 'normalize.css';
 import './styled';
 import {Route, Routes} from "react-router";
 import Layout from "./pages/layout/layout";

@@ -1,10 +1,11 @@
 import styled from "styled-components";
 import {Link} from "react-router-dom";
+import {INavProps} from "./nav";
 
-export const NavWrap = styled.header`
+export const NavWrapStyled = styled.header`
   box-shadow: -2px 0 8px 2px rgba(0, 0, 0, 0.1);
 `
-export const NavInner = styled.div`
+export const NavInnerStyled = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -14,24 +15,24 @@ export const NavInner = styled.div`
     padding: 15px 0;
   }
 `
-export const NavLogo = styled.div`
+export const NavLogoStyled = styled.div`
   @media (max-width: 768px) {
     align-items: center;
     display: flex;
     justify-content: space-between;
   }
 `
-export const NavLink = styled(Link)`
+export const NavLinkStyled = styled(Link)`
   font-family: "Karla", "Arial", sans-serif;
 `
-export const NavButton = styled.button`
+export const NavButtonStyled = styled.button`
   background: transparent;
   display: flex;
   @media (min-width: 768px) {
     display: none;
   }
 `
-export const NavList = styled.ul`
+export const NavListStyled = styled.ul`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 25px;
@@ -39,11 +40,11 @@ export const NavList = styled.ul`
     display: block;
   }
 `
-export const NavItem = styled.li`
+export const NavItemStyled = styled.li`
   padding: 10px 0;
 `
-export const NavContent = styled.nav`
+export const NavContentStyled = styled.nav<INavProps>`
   @media (max-width: 768px) {
-    display: none;
+    display: ${props => props.display};
   }
 `
