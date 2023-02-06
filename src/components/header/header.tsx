@@ -1,6 +1,5 @@
 import React, {FC, useState} from 'react';
 import {Container} from "../../styled";
-
 import Nav from "./nav";
 import NavLogo from "./nav-logo";
 import {NavWrapStyled, NavInnerStyled} from './styled';

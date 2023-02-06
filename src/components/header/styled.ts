@@ -24,6 +24,7 @@ export const NavLogoStyled = styled.div`
 `
 export const NavLinkStyled = styled(Link)`
   font-family: "Karla", "Arial", sans-serif;
+  font-weight: 700;
 `
 export const NavButtonStyled = styled.button`
   background: transparent;

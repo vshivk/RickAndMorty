@@ -1,11 +1,5 @@
 import styled from "styled-components";
 
-export const CharactersMainStyled = styled.div`
-  display: grid;
-  gap: 60px;
-  flex-direction: column;
-  padding: 20px 0;
-`
 export const CharactersFiltrationStyled = styled.div`
   display: grid;
   grid-template-columns: repeat(4, 1fr);

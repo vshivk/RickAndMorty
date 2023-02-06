@@ -2,18 +2,20 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
 import {BrowserRouter} from "react-router-dom";
-import {GlobalStyle} from "./styled";
+import { FontsGlobal } from './styles/fonts';
+import { GlobalStyle } from './styles/global';
 
 const root = ReactDOM.createRoot(
-  document.getElementById('root') as HTMLElement
+    document.getElementById('root') as HTMLElement
 );
 
 root.render(
-  <React.StrictMode>
-      <BrowserRouter>
-          <GlobalStyle/>
-          <App/>
-      </BrowserRouter>
-  </React.StrictMode>
+    <React.StrictMode>
+        <BrowserRouter>
+            <FontsGlobal/>
+            <GlobalStyle/>
+            <App/>
+        </BrowserRouter>
+    </React.StrictMode>
 );
 

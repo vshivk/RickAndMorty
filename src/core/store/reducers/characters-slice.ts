@@ -9,7 +9,7 @@ export const initialState = {
     error: '',
 }
 
-export const reducerSlice = createSlice({
+export const charactersSlice = createSlice({
     name: 'rickAndMorty',
     initialState,
     reducers: {}
