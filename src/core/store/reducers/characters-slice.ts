@@ -1,6 +1,8 @@
-import {createSlice} from "@reduxjs/toolkit";
+import {createSlice, PayloadAction} from "@reduxjs/toolkit";
+import {RootState} from "../store";
+import {Character, GeneralState} from "../../types/characters";
 
-export const initialState = {
+export const initialState: GeneralState = {
     characters: [],
     locations: [],
     episodes: [],
@@ -10,7 +12,18 @@ export const initialState = {
 }
 
 export const charactersSlice = createSlice({
-    name: 'rickAndMorty',
+    name: 'characters',
     initialState,
-    reducers: {}
+    reducers: {
+        charactersFetching(state) {
+            state.isLoading = true;
+        },
+        charactersAdding(state, action: PayloadAction<Character[]>) {
+            state.characters = [...state.characters, ...action.payload];
+            state.isLoading = false;
+        }
+    }
 });
+export const {charactersFetching, charactersAdding} = charactersSlice.actions;
+export const charactersReducer = (state: RootState) => state.characters.characters;
+export default charactersSlice.reducer;

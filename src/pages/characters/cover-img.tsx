@@ -3,8 +3,8 @@ import logoCharacters from "../../assets/logo-characters.png";
 import {Flex, CoverImgStyled} from "../../styled";
 
 export interface ICoverImgProps {
-    width: string,
-    height: string
+    widthImg: string,
+    heightImg: string
 }
 
 const CoverImg: FC<ICoverImgProps> = (props) => {

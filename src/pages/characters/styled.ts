@@ -14,6 +14,8 @@ export const CharactersFiltrationStyled = styled.div`
 export const CharactersItemImgStyled = styled.img`
   width: 100%;
   object-fit: cover;
+  background-color: #6e6b6b91;
+  min-height: 240px;
 `
 export const CharactersItemDescriptionStyled = styled.div`
   padding: 12px;

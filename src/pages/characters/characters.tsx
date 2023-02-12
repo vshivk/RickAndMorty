@@ -1,15 +1,23 @@
-import React, {FC} from 'react';
+import React, {FC, useEffect} from 'react';
 import CoverImg from "./cover-img";
 import Filtration from "./filtration";
 import Cards from "./cards";
 import {SectionContentStyled} from '../../styled';
+import {fetchCharacters} from "../../core/store/action-creators/characters";
+import {useActions} from "../../core/hooks/use-actions";
 
 const Characters: FC = () => {
+    const {fetchCharacters} = useActions();
+
+    useEffect(() => {
+        fetchCharacters();
+    }, []);
+
     return (
         <>
             <CoverImg
-                width={'300px'}
-                height={'100px'}
+                widthImg={'300px'}
+                heightImg={'100px'}
             />
             <SectionContentStyled>
                 <Filtration/>
