@@ -5,13 +5,16 @@ import Cards from "./cards";
 import {SectionContentStyled} from '../../styled';
 import {fetchCharacters} from "../../core/store/action-creators/characters";
 import {useActions} from "../../core/hooks/use-actions";
+import {useAppSelector} from "../../core/hooks/use-app-selector";
+import {selectCharacters} from "../../core/store/reducers/characters-slice";
 
 const Characters: FC = () => {
     const {fetchCharacters} = useActions();
+    const {currentPage} = useAppSelector(selectCharacters);
 
-    useEffect(() => {
-        fetchCharacters();
-    }, []);
+    // useEffect(() => {
+    //     fetchCharacters(currentPage);
+    // }, []);
 
     return (
         <>

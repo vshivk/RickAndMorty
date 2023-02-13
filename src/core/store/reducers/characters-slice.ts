@@ -18,12 +18,26 @@ export const charactersSlice = createSlice({
         charactersFetching(state) {
             state.isLoading = true;
         },
-        charactersAdding(state, action: PayloadAction<Character[]>) {
-            state.characters = [...state.characters, ...action.payload];
+        charactersFetchingSuccess(state, action: PayloadAction<Character[]>) {
             state.isLoading = false;
+            state.error = '';
+            state.currentPage += 1;
+            state.characters = [...state.characters, ...action.payload];
+        },
+        charactersFetchingError(state, action: PayloadAction<string>) {
+            state.isLoading = false;
+            state.error = action.payload;
+        },
+        setCurrentPage(state, action: PayloadAction<number>) {
+            state.currentPage = action.payload
         }
     }
 });
-export const {charactersFetching, charactersAdding} = charactersSlice.actions;
-export const charactersReducer = (state: RootState) => state.characters.characters;
+export const {
+    charactersFetching,
+    charactersFetchingSuccess,
+    charactersFetchingError,
+    setCurrentPage
+} = charactersSlice.actions;
+export const selectCharacters = (state: RootState) => state.characters;
 export default charactersSlice.reducer;

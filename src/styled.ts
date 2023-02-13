@@ -35,6 +35,8 @@ export const CardsItemStyled = styled.div`
   box-shadow: 0 1px 5px rgb(0 0 0 / 20%), 0 3px 4px rgb(0 0 0 / 12%), 0 2px 4px rgb(0 0 0 / 14%);
   border-radius: 4px;
   min-height: 340px;
+  display: grid;
+  flex-direction: column;
 `
 export const CoverImgStyled = styled.img<ICoverImgProps>`
   @media (max-width: 768px) {
