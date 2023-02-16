@@ -6,8 +6,9 @@ export const initialState: GeneralState = {
     characters: [],
     locations: [],
     episodes: [],
-    isLoading: false,
+    isLoading: true,
     currentPage: 1,
+    totalPage: 0,
     error: '',
 }
 
@@ -21,15 +22,20 @@ export const charactersSlice = createSlice({
         charactersFetchingSuccess(state, action: PayloadAction<Character[]>) {
             state.isLoading = false;
             state.error = '';
-            state.currentPage += 1;
             state.characters = [...state.characters, ...action.payload];
         },
         charactersFetchingError(state, action: PayloadAction<string>) {
             state.isLoading = false;
             state.error = action.payload;
         },
-        setCurrentPage(state, action: PayloadAction<number>) {
-            state.currentPage = action.payload
+        setCurrentPage(state) {
+            state.currentPage = state.currentPage + 1;
+        },
+        getTotalPages(state, action: PayloadAction<number>) {
+            state.totalPage = action.payload;
+        },
+        filterCharacters(state, action:PayloadAction<Character[]>){
+            state.characters = action.payload;
         }
     }
 });
@@ -37,7 +43,9 @@ export const {
     charactersFetching,
     charactersFetchingSuccess,
     charactersFetchingError,
-    setCurrentPage
+    setCurrentPage,
+    getTotalPages,
+    filterCharacters
 } = charactersSlice.actions;
 export const selectCharacters = (state: RootState) => state.characters;
 export default charactersSlice.reducer;

@@ -12,9 +12,9 @@ const Characters: FC = () => {
     const {fetchCharacters} = useActions();
     const {currentPage} = useAppSelector(selectCharacters);
 
-    // useEffect(() => {
-    //     fetchCharacters(currentPage);
-    // }, []);
+    useEffect(() => {
+        fetchCharacters(currentPage);
+    }, [currentPage]);
 
     return (
         <>

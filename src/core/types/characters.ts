@@ -24,5 +24,10 @@ export interface GeneralState {
     episodes: string[],
     isLoading: boolean,
     currentPage: number,
+    totalPage: number,
     error: string
+}
+export interface SelectType {
+    id: string,
+    name: string
 }

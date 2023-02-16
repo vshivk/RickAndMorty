@@ -12,7 +12,7 @@ export const InputSearchStyled = styled.input`
   background-position: 5px 50%;
   outline-offset: 0;
 `;
-export const InputSelectStyled = styled.input`
+export const InputSelectStyled = styled.select`
   border: 1px solid rgba(0, 0, 0, 0.38);
   padding: 15px 35px 15px 15px;
   border-radius: 8px;
@@ -20,4 +20,7 @@ export const InputSelectStyled = styled.input`
   background-image: url(${triangle});
   background-repeat: no-repeat;
   background-position: 100% 50%;
+  background-color: transparent;
+  cursor: pointer;
+  -webkit-appearance: none;
 `

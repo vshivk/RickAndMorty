@@ -2,14 +2,15 @@ import React, {FC} from 'react';
 import {CharactersFiltrationStyled} from "./styled";
 import InputSearch from "../../components/selects/input-search";
 import InputSelect from "../../components/selects/input-select";
+import {genders, species, statuses} from "../../core/consts/characters";
 
 const Filtration: FC = () => {
     return (
         <CharactersFiltrationStyled>
             <InputSearch placeholder={'Filter by name...'}/>
-            <InputSelect placeholder={'Species'}/>
-            <InputSelect placeholder={'Gender'}/>
-            <InputSelect placeholder={'Status'}/>
+            <InputSelect name={'Species'} data={species}/>
+            <InputSelect name={'Gender'} data={genders}/>
+            <InputSelect name={'Status'} data={statuses}/>
         </CharactersFiltrationStyled>
     );
 };
