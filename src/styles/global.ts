@@ -7,7 +7,7 @@ export const GlobalStyle = createGlobalStyle`
     font-weight: 400;
     color: #000;
   }
-
+  
   ul {
     margin: 0;
     padding-inline-start: 0;

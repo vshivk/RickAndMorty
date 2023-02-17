@@ -1,19 +1,34 @@
-import React, {FC} from 'react';
+import React, {Dispatch, FC} from 'react';
 import {CardsWrapStyled} from "../../styled";
 import Button from "../../components/button/button";
 import CharactersList from "./characters-list";
 import {useAppSelector} from "../../core/hooks/use-app-selector";
 import {selectCharacters} from "../../core/store/reducers/characters-slice";
 import {MoonLoader} from "react-spinners";
+import {Character} from "../../core/types/characters";
 
-const Cards: FC = () => {
+interface ICardsProps {
+    species: string,
+    gender: string,
+    status: string,
+    setFilteredCharacters: Dispatch<React.SetStateAction<Character[]>>,
+    filteredCharacters: Character[]
+}
+const Cards: FC<ICardsProps> = ({status,species,gender, setFilteredCharacters,filteredCharacters}) => {
     const {error, isLoading, characters, currentPage, totalPage} = useAppSelector(selectCharacters);
+
     return (
         <>
             {characters.length > 0
                 &&
                 <CardsWrapStyled>
-                    <CharactersList/>
+                    <CharactersList
+                        species={species}
+                        gender={gender}
+                        status={status}
+                        filteredCharacters={filteredCharacters}
+                        setFilteredCharacters={setFilteredCharacters}
+                    />
                     {!isLoading
                         &&
                         <Button/>

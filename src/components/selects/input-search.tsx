@@ -1,4 +1,4 @@
-import React, {FC, useEffect, useState} from 'react';
+import React, {Dispatch, FC, useEffect, useState} from 'react';
 import {InputSearchStyled} from "./styled";
 import {useAppSelector} from "../../core/hooks/use-app-selector";
 import {
@@ -11,21 +11,22 @@ import {useAppDispatch} from "../../core/hooks/use-app-dispatch";
 
 interface IInputSearchProps {
     placeholder: string,
+    setFilteredCharacters: Dispatch<React.SetStateAction<Character[]>>,
+    filteredCharacters: Character[]
 }
 
-const InputSearch: FC<IInputSearchProps> = ({placeholder}) => {
-    const [searchValue,setSearchValue] = useState('');
+const InputSearch: FC<IInputSearchProps> = ({placeholder, filteredCharacters, setFilteredCharacters}) => {
+    const [searchValue, setSearchValue] = useState('');
     const {characters} = useAppSelector(selectCharacters);
-    const dispatch = useAppDispatch();
 
-    const filteredCharacters = (searchValue: string, charactersList: Character[]) => {
+    const filterCharacters = (searchValue: string, charactersList: Character[]) => {
         if (!searchValue) return charactersList;
-        return characters.filter(({name}) =>
+        return filteredCharacters.filter(({name}) =>
             name.toLowerCase().includes(searchValue.toLowerCase())
         );
     }
     useEffect(() => {
-        dispatch(filterCharacters(filteredCharacters(searchValue, characters)));
+        setFilteredCharacters((filterCharacters(searchValue, characters)));
     }, [searchValue]);
 
     return (
