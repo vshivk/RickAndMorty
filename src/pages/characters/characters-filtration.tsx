@@ -10,16 +10,18 @@ interface IFiltrationProps {
     setGender: Dispatch<SetStateAction<string>>,
     setStatus: Dispatch<SetStateAction<string>>,
     setFilteredCharacters: Dispatch<React.SetStateAction<Character[]>>,
-    filteredCharacters: Character[]
+    filteredCharacters: Character[],
+    characters: Character[]
 }
 
-const CharactersFiltration: FC<IFiltrationProps> = ({setSpecies, setStatus, setGender,filteredCharacters,setFilteredCharacters}) => {
+const CharactersFiltration: FC<IFiltrationProps> = ({setSpecies, setStatus, setGender,filteredCharacters,setFilteredCharacters,characters}) => {
     return (
         <CharactersFiltrationStyled>
             <InputSearch
                 placeholder={'Filter by name...'}
-                filteredCharacters={filteredCharacters}
-                setFilteredCharacters={setFilteredCharacters}
+                filteredCards={filteredCharacters}
+                setFilteredCards={setFilteredCharacters}
+                cards={characters}
             />
             <InputSelect
                 name={'Species'}

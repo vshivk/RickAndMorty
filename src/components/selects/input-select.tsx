@@ -9,7 +9,6 @@ interface IInputSelectProps {
 }
 
 const InputSelect: FC<IInputSelectProps> = ({name, data, setValue}) => {
-
     return (
         <InputSelectStyled name={name} id={name} defaultValue={name} onChange={(e) => setValue(e.target.value)}>
             <option value={name} hidden>{name}</option>

@@ -1,10 +1,12 @@
 import React, {FC} from 'react';
-import logoCharacters from "../../assets/logo-characters.png";
-import {Flex, CoverImgStyled} from "../../styled";
+import {Flex} from "../../styled";
+import {CoverImgStyled} from "./styled";
 
 export interface ICoverImgProps {
     widthImg: string,
-    heightImg: string
+    heightImg: string,
+    img: string,
+    alt: string
 }
 
 const CoverImg: FC<ICoverImgProps> = (props) => {
@@ -12,8 +14,8 @@ const CoverImg: FC<ICoverImgProps> = (props) => {
         <Flex>
             <CoverImgStyled
                 {...props}
-                src={logoCharacters}
-                alt="logo-characters"
+                src={props.img}
+                alt={props.alt}
             />
         </Flex>
     );

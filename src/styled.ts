@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import {ICoverImgProps} from "./pages/characters/cover-img";
 
 export const Container = styled.div`
   max-width: 1170px;
@@ -37,12 +36,6 @@ export const CardsItemStyled = styled.div`
   height: 100%;
   display: grid;
   flex-direction: column;
-`
-export const CoverImgStyled = styled.img<ICoverImgProps>`
-  @media (max-width: 768px) {
-    width: ${props => props.widthImg};
-    height: ${props => props.heightImg};
-  }
 `
 export const SectionContentStyled = styled.div`
   display: grid;

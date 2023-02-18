@@ -1,10 +1,18 @@
-import React from 'react';
+import React, {FC} from 'react';
 
-const Character = () => {
+const Character:FC = () => {
     return (
-        <div>
-            character details
-        </div>
+        <>
+            <div>
+                <div>
+                    <a href="#">← GO BACK</a>
+                </div>
+                <div>
+                    <img src="" alt=""/>
+                    <h3>Rick Sanchez</h3>
+                </div>
+            </div>
+        </>
     );
 };
 

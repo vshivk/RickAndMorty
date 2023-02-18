@@ -15,21 +15,6 @@ interface ICharactersListProps {
 }
 
 const CharactersList: FC<ICharactersListProps> = ({status, species, gender,setFilteredCharacters,filteredCharacters}) => {
-    const {characters} = useAppSelector(selectCharacters);
-    // const includesOption = (arr: string[], values: string[]) => {
-    //     return values.some(value => arr.includes(value));
-    // }
-    // const selectOption = () => {
-    //     return characters.filter(character => {
-    //         const {status: characterStatus, species: characterSpecies, gender: characterGender} = character;
-    //         return includesOption([status, species, gender], [characterStatus, characterSpecies, characterGender]);
-    //     });
-    // }
-    //
-    // useEffect(() => {
-    //     setFilteredCharacters(selectOption());
-    // }, [status, species, gender]);
-
     return (
         <CardsListStyled>
             {filteredCharacters.map(character =>

@@ -11,22 +11,22 @@ import {useAppDispatch} from "../../core/hooks/use-app-dispatch";
 
 interface IInputSearchProps {
     placeholder: string,
-    setFilteredCharacters: Dispatch<React.SetStateAction<Character[]>>,
-    filteredCharacters: Character[]
+    setFilteredCards: Dispatch<React.SetStateAction<Character[]>>,
+    filteredCards: Character[],
+    cards: Character[]
 }
 
-const InputSearch: FC<IInputSearchProps> = ({placeholder, filteredCharacters, setFilteredCharacters}) => {
+const InputSearch: FC<IInputSearchProps> = ({placeholder, filteredCards, setFilteredCards, cards}) => {
     const [searchValue, setSearchValue] = useState('');
-    const {characters} = useAppSelector(selectCharacters);
 
-    const filterCharacters = (searchValue: string, charactersList: Character[]) => {
-        if (!searchValue) return charactersList;
-        return filteredCharacters.filter(({name}) =>
+    const filterCards = (searchValue: string, cardsList: Character[]) => {
+        if (!searchValue) return cardsList;
+        return filteredCards.filter(({name}) =>
             name.toLowerCase().includes(searchValue.toLowerCase())
         );
     }
     useEffect(() => {
-        setFilteredCharacters((filterCharacters(searchValue, characters)));
+        setFilteredCards((filterCards(searchValue, cards)));
     }, [searchValue]);
 
     return (

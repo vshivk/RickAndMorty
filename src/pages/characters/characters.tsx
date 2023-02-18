@@ -1,5 +1,5 @@
 import React, {FC, useEffect, useState} from 'react';
-import CoverImg from "./cover-img";
+import CoverImg from "../../components/cover-img/cover-img";
 import CharactersFiltration from "./characters-filtration";
 import Cards from "./cards";
 import {SectionContentStyled} from '../../styled';
@@ -7,6 +7,7 @@ import {fetchCharacters} from "../../core/store/action-creators/characters";
 import {useActions} from "../../core/hooks/use-actions";
 import {useAppSelector} from "../../core/hooks/use-app-selector";
 import {selectCharacters} from "../../core/store/reducers/characters-slice";
+import logoCharacters from "../../assets/cover-characters.png";
 
 const Characters: FC = () => {
     const {fetchCharacters} = useActions();
@@ -17,7 +18,7 @@ const Characters: FC = () => {
     const [filteredCharacters, setFilteredCharacters] = useState(characters);
 
     useEffect(() => {
-        fetchCharacters(currentPage);
+        fetchCharacters(currentPage,setFilteredCharacters,filteredCharacters);
     }, [currentPage]);
 
     return (
@@ -25,6 +26,8 @@ const Characters: FC = () => {
             <CoverImg
                 widthImg={'300px'}
                 heightImg={'100px'}
+                img={logoCharacters}
+                alt={'cover-characters'}
             />
             <SectionContentStyled>
                 <CharactersFiltration
@@ -33,6 +36,7 @@ const Characters: FC = () => {
                     setStatus={setStatus}
                     filteredCharacters={filteredCharacters}
                     setFilteredCharacters={setFilteredCharacters}
+                    characters={characters}
                 />
                 <Cards
                     species={species}

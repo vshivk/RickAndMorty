@@ -4,10 +4,12 @@ import {
     charactersFetchingSuccess,
     charactersFetching,
     charactersFetchingError,
-    getTotalPages
+    getTotalPages, filterCharacters
 } from "../reducers/characters-slice";
+import React, {Dispatch} from "react";
+import {Character} from "../../types/characters";
 
-export const fetchCharacters = (page: number) => {
+export const fetchCharacters = (page: number,setFilteredCharacters:Dispatch<React.SetStateAction<Character[]>>,filteredCharacters:Character[]) => {
     return async (dispatch: AppDispatch) => {
         try {
             dispatch(charactersFetching);
@@ -16,6 +18,7 @@ export const fetchCharacters = (page: number) => {
             const totalPage = response.data.info.pages;
             dispatch(getTotalPages(totalPage));
             dispatch(charactersFetchingSuccess(characters));
+            setFilteredCharacters([...filteredCharacters,...characters]);
         } catch (e: any) {
             dispatch(charactersFetchingError(e.message));
         }

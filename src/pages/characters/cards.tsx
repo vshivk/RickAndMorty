@@ -14,7 +14,12 @@ interface ICardsProps {
     setFilteredCharacters: Dispatch<React.SetStateAction<Character[]>>,
     filteredCharacters: Character[]
 }
-const Cards: FC<ICardsProps> = ({status,species,gender, setFilteredCharacters,filteredCharacters}) => {
+
+const spinnerStyle = {
+    display: "block",
+    margin: "0 auto",
+}
+const Cards: FC<ICardsProps> = ({status, species, gender, setFilteredCharacters, filteredCharacters}) => {
     const {error, isLoading, characters, currentPage, totalPage} = useAppSelector(selectCharacters);
 
     return (
@@ -29,10 +34,7 @@ const Cards: FC<ICardsProps> = ({status,species,gender, setFilteredCharacters,fi
                         filteredCharacters={filteredCharacters}
                         setFilteredCharacters={setFilteredCharacters}
                     />
-                    {!isLoading
-                        &&
-                        <Button/>
-                    }
+                    {!isLoading && <Button/>}
                     {currentPage === totalPage && <p>All characters have been loaded</p>}
                 </CardsWrapStyled>
             }
@@ -40,10 +42,7 @@ const Cards: FC<ICardsProps> = ({status,species,gender, setFilteredCharacters,fi
             <MoonLoader
                 color={'#000'}
                 loading={isLoading}
-                cssOverride={{
-                    display: "block",
-                    margin: "0 auto",
-                }}
+                cssOverride={spinnerStyle}
                 size={30}
                 aria-label="Loading Spinner"
                 data-testid="loader"
