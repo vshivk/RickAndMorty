@@ -14,7 +14,7 @@ const App: FC = () => {
         <Routes>
             <Route path={'/'} element={<Layout/>}>
                 <Route path='/' element={<Characters/>}/>
-                <Route path={'character'} element={<Character/>}/>
+                <Route path={'character/:id'} element={<Character/>}/>
                 <Route path={'locations'} element={<Locations/>}/>
                 <Route path={'episodes'} element={<Episodes/>}/>
                 <Route path={'/*'} element={<NotFound/>}/>

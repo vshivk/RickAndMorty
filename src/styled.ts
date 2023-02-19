@@ -36,6 +36,7 @@ export const CardsItemStyled = styled.div`
   height: 100%;
   display: grid;
   flex-direction: column;
+  overflow: hidden;
 `
 export const SectionContentStyled = styled.div`
   display: grid;

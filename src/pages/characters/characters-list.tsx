@@ -1,9 +1,6 @@
 import React, {Dispatch, FC, useEffect, useMemo} from 'react';
 import {CardsListStyled} from "../../styled";
 import CharactersItem from "./characters-item";
-import {useAppSelector} from "../../core/hooks/use-app-selector";
-import {filterCharacters, selectCharacters} from "../../core/store/reducers/characters-slice";
-import {useAppDispatch} from "../../core/hooks/use-app-dispatch";
 import {Character} from "../../core/types/characters";
 
 interface ICharactersListProps {

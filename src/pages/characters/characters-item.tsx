@@ -1,8 +1,7 @@
 import React, {FC} from 'react';
-import {Link} from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
 import {CardsItemStyled} from "../../styled";
 import {CharactersItemDescriptionStyled, CharactersItemImgStyled} from "./styled";
-import rick from "../../assets/rick.png";
 import {Character} from "../../core/types/characters";
 
 interface ICharactersItemProps {
@@ -11,9 +10,11 @@ interface ICharactersItemProps {
 
 const CharactersItem: FC<ICharactersItemProps> = ({character}) => {
     const {image, name, species} = character;
+    const navigate = useNavigate();
+
     return (
         <li>
-            <Link to={'character'}>
+            <Link to={`character/${character.id}`} onClick={() => navigate(`character/${character.id}`)}>
                 <CardsItemStyled>
                     <CharactersItemImgStyled src={image} alt={name}/>
                     <CharactersItemDescriptionStyled>
