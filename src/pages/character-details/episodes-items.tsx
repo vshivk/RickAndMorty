@@ -3,17 +3,24 @@ import {
     CharacterDescriptionItem,
     CharacterDescriptionItemDate,
     CharacterDescriptionItemLink,
-    CharacterDescriptionItemName
+    CharacterDescriptionItemName, ItemLinkInfo
 } from "./styled";
+import arrow from "../../assets/svg/arrow-right.svg";
+import { Flex } from '../../styled';
 
 const EpisodesItems:FC = () => {
     return (
         <>
             <CharacterDescriptionItem>
                 <CharacterDescriptionItemLink to={'/'}>
-                    <CharacterDescriptionItemName>S01E01</CharacterDescriptionItemName>
-                    <span>Pilot</span>
-                    <CharacterDescriptionItemDate>December 2, 2013</CharacterDescriptionItemDate>
+                    <ItemLinkInfo>
+                        <CharacterDescriptionItemName>S01E01</CharacterDescriptionItemName>
+                        <span>Pilot</span>
+                        <CharacterDescriptionItemDate>December 2, 2013</CharacterDescriptionItemDate>
+                    </ItemLinkInfo>
+                    <Flex>
+                        <img src={arrow} alt="arrow"/>
+                    </Flex>
                 </CharacterDescriptionItemLink>
             </CharacterDescriptionItem>
         </>

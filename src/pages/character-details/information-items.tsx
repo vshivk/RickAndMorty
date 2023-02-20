@@ -1,6 +1,13 @@
 import React, {FC} from 'react';
-import {CharacterDescriptionItem, CharacterDescriptionItemLink, CharacterDescriptionItemName} from "./styled";
+import {
+    CharacterDescriptionItem,
+    CharacterDescriptionItemLink,
+    CharacterDescriptionItemName,
+    ItemLinkInfo
+} from "./styled";
 import {Character} from "../../core/types/characters";
+import {Flex} from "../../styled";
+import arrow from "../../assets/svg/arrow-right.svg";
 interface IInformationItemsProps {
     currentCharacter: Character
 }
@@ -29,8 +36,13 @@ const InformationItems:FC<IInformationItemsProps> = ({currentCharacter}) => {
             </CharacterDescriptionItem>
             <CharacterDescriptionItem>
                 <CharacterDescriptionItemLink to={'/'}>
-                    <CharacterDescriptionItemName>Location</CharacterDescriptionItemName>
-                    <span>{currentCharacter.location.name}</span>
+                    <ItemLinkInfo>
+                        <CharacterDescriptionItemName>Location</CharacterDescriptionItemName>
+                        <span>{currentCharacter.location.name}</span>
+                    </ItemLinkInfo>
+                    <Flex>
+                        <img src={arrow} alt="arrow"/>
+                    </Flex>
                 </CharacterDescriptionItemLink>
             </CharacterDescriptionItem>
         </>

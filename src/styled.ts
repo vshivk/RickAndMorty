@@ -51,4 +51,7 @@ export const TextColorGray = styled.p`
 export const LinkBackStyled = styled(Link)`
   font-size: 18px;
   font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 5px;
 `;
