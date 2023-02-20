@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import {Link} from "react-router-dom";
 
 export const Container = styled.div`
   max-width: 1170px;
@@ -44,3 +45,10 @@ export const SectionContentStyled = styled.div`
   flex-direction: column;
   padding: 20px 0;
 `
+export const TextColorGray = styled.p`
+  color: #8E8E93;
+`;
+export const LinkBackStyled = styled(Link)`
+  font-size: 18px;
+  font-weight: 700;
+`;
