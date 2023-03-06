@@ -49,6 +49,10 @@ export const CharacterImg = styled.img`
   object-fit: cover;
   border: 5px solid #F2F2F7;
   border-radius: 100%;
+  @media (max-width: 768px){
+    width: 250px;
+    height: 250px;
+  }
 `;
 export const ItemLinkInfo = styled.div`
   display: flex;
@@ -56,4 +60,11 @@ export const ItemLinkInfo = styled.div`
 `;
 export const LinkBackWrap = styled.div`
 padding-top: 15px;
+`;
+export const CharacterImgWrap = styled.div`
+  @media (max-width: 768px){
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 `;

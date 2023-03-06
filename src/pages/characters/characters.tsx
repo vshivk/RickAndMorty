@@ -20,7 +20,6 @@ const Characters: FC = () => {
     useEffect(() => {
         fetchCharacters(currentPage,setFilteredCharacters,filteredCharacters);
     }, [currentPage]);
-
     return (
         <>
             <CoverImg
