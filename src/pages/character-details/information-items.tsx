@@ -35,7 +35,7 @@ const InformationItems:FC<IInformationItemsProps> = ({currentCharacter}) => {
                 <span>{currentCharacter.type !== '' ? currentCharacter.type : 'unknown'}</span>
             </CharacterDescriptionItem>
             <CharacterDescriptionItem>
-                <CharacterDescriptionItemLink to={'/'}>
+                <CharacterDescriptionItemLink to={'#'}>
                     <ItemLinkInfo>
                         <CharacterDescriptionItemName>Location</CharacterDescriptionItemName>
                         <span>{currentCharacter.location.name}</span>

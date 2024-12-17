@@ -12,7 +12,7 @@ const EpisodesItems:FC = () => {
     return (
         <>
             <CharacterDescriptionItem>
-                <CharacterDescriptionItemLink to={'/'}>
+                <CharacterDescriptionItemLink to={'#'}>
                     <ItemLinkInfo>
                         <CharacterDescriptionItemName>S01E01</CharacterDescriptionItemName>
                         <span>Pilot</span>

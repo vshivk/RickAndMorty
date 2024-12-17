@@ -1,11 +1,11 @@
-import React, {FC, useEffect, useState} from 'react';
+import React, { FC, useEffect, useState } from 'react';
 import CoverImg from "../../components/cover-img/cover-img";
 import CharactersFiltration from "./characters-filtration";
 import Cards from "./cards";
-import {SectionContentStyled} from '../../styled';
-import {useActions} from "../../core/hooks/use-actions";
-import {useAppSelector} from "../../core/hooks/use-app-selector";
-import {selectCharacters} from "../../core/store/reducers/characters-slice";
+import { SectionContentStyled } from '../../styled';
+import { useActions } from "../../core/hooks/use-actions";
+import { useAppSelector } from "../../core/hooks/use-app-selector";
+import { selectCharacters } from "../../core/store/reducers/characters-slice";
 import logoCharacters from "../../assets/cover-characters.png";
 
 const Characters: FC = () => {
@@ -20,7 +20,8 @@ const Characters: FC = () => {
         if (isLoading) {
             fetchCharacters(currentPage, setFilteredCharacters, filteredCharacters);
         }
-    }, [isLoading, fetchCharacters, currentPage]);
+    }, [isLoading, fetchCharacters, currentPage, filteredCharacters]);
+
     return (
         <>
             <CoverImg
