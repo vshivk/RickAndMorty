@@ -13,7 +13,7 @@ const Characters: FC = () => {
     const {characters, currentPage, isLoading} = useAppSelector(selectCharacters);
     const [species, setSpecies] = useState('');
     const [gender, setGender] = useState('');
-    const [status, setStatus] = useState('')
+    const [status, setStatus] = useState('');
     const [filteredCharacters, setFilteredCharacters] = useState(characters);
 
     useEffect(() => {
