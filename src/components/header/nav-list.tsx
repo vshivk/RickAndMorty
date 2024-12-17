@@ -8,10 +8,10 @@ const NavList: FC = () => {
                 <NavLinkStyled to={'/'}>Characters</NavLinkStyled>
             </NavItemStyled>
             <NavItemStyled>
-                <NavLinkStyled to={'locations'}>Locations</NavLinkStyled>
+                <NavLinkStyled to={'#'}>Locations</NavLinkStyled>
             </NavItemStyled>
             <NavItemStyled>
-                <NavLinkStyled to={'episodes'}>Episodes</NavLinkStyled>
+                <NavLinkStyled to={'#'}>Episodes</NavLinkStyled>
             </NavItemStyled>
         </NavListStyled>
     );
