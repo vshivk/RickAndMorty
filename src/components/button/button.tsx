@@ -2,7 +2,7 @@ import React, {FC} from 'react';
 import {Flex} from '../../styled';
 import {ButtonLoadStyled} from "./styled";
 import {useAppSelector} from "../../core/hooks/use-app-selector";
-import {selectCharacters, setCurrentPage} from "../../core/store/reducers/characters-slice";
+import { charactersFetching, selectCharacters, setCurrentPage } from "../../core/store/reducers/characters-slice";
 import {useAppDispatch} from "../../core/hooks/use-app-dispatch";
 
 const Button: FC = () => {
@@ -11,6 +11,7 @@ const Button: FC = () => {
 
     const setPage = () => {
         dispatch(setCurrentPage());
+        dispatch(charactersFetching());
     }
 
     return (
